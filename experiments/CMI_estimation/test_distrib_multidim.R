@@ -30,7 +30,7 @@ for(s in nz){
         if(s == 0){
           estimate = CMI.estimates(data=dd, xind=1,yind=2,zinds=c(),isCat=c(1),logE=T)
         }else{
-          estimate = CMI.estimates(data=dd, xind=1,yind=2,zinds=c(3:s + 2),isCat=c(1,3:s + 2),logE=T)
+          estimate = CMI.estimates(data=dd, xind=1,yind=2,zinds=c(1:s + 2),isCat=c(1,1:s + 2),logE=T)
         }
         estimates[l,1] = estimate[[1]] / n ## pure likelihood
         for(i in 2:6){
